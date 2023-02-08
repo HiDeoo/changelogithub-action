@@ -1,0 +1,53 @@
+name: 'Generate changelog for GitHub'
+author: 'HiDeoo'
+description: 'Generate changelog for GitHub releases from Conventional Commits.'
+inputs:
+  capitalize:
+    description: 'Capitalize commit messages.'
+    required: false
+  contributors:
+    description: 'Whether to include contributors in release notes.'
+    required: false
+  draft:
+    description: 'Mark the release as a draft.'
+    required: false
+  dry:
+    description: 'Dry run. Skip releasing to GitHub.'
+    required: false
+  emoji:
+    description: 'Use emojis in section titles.'
+    required: false
+  from:
+    description: 'The start commit reference. When not provided, the latest git tag is used.'
+    required: false
+  github:
+    description: 'The owner/repository identifier.'
+    required: false
+  group:
+    description: 'Nest commit messages under their scopes.'
+    required: false
+  name:
+    description: 'Name of the release.'
+    required: false
+  prerelease:
+    description: 'Mark the release as prerelease.'
+    required: false
+  to:
+    description: 'The end commit reference. When not provided, the latest commit in HEAD is used.'
+    required: false
+  token:
+    description: 'GitHub Token'
+    required: true
+outputs:
+  release_id:
+    description: 'The new release ID.'
+  release_url:
+    description: 'The new release URL.'
+  release_upload_url:
+    description: 'The new release upload URL.'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  color: 'green'
+  icon: 'book-open'

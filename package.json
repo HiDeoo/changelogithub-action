@@ -1,0 +1,52 @@
+{
+  "name": "changelogithub-action",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "",
+  "author": "HiDeoo <github@hideoo.dev> (https://hideoo.dev)",
+  "scripts": {
+    "local": "act -j local --container-architecture linux/amd64",
+    "build": "ncc build src/index.ts",
+    "lint": "prettier -c --cache . && eslint . --cache --max-warnings=0 && tsc --noEmit",
+    "test": "echo \"Error: no test implemented.\" && exit 1",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@actions/core": "1.10.0",
+    "changelogithub": "0.12.7"
+  },
+  "devDependencies": {
+    "@hideoo/eslint-config": "1.0.0",
+    "@hideoo/prettier-config": "1.0.1",
+    "@hideoo/tsconfig": "1.0.0",
+    "@vercel/ncc": "0.36.1",
+    "eslint": "8.33.0",
+    "husky": "8.0.3",
+    "lint-staged": "13.1.1",
+    "prettier": "2.8.4",
+    "typescript": "4.9.5"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "changelogithub@0.12.7": "patches/changelogithub@0.12.7.patch"
+    }
+  },
+  "packageManager": "pnpm@7.26.3",
+  "private": true,
+  "sideEffects": false,
+  "keywords": [],
+  "homepage": "https://github.com/HiDeoo/changelogithub-action",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HiDeoo/changelogithub-action.git"
+  },
+  "bugs": "https://github.com/HiDeoo/changelogithub-action/issues",
+  "prettier": "@hideoo/prettier-config",
+  "lint-staged": {
+    "**/*": "prettier -w -u --cache",
+    "**/*.{js,jsx,ts,tsx,cjs,mjs}": "eslint --cache --max-warnings=0"
+  }
+}
