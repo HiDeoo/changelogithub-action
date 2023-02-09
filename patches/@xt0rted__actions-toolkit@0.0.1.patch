@@ -1,0 +1,13 @@
+diff --git a/package.json b/package.json
+index f00802113284460781ee6b05c48b68d32ccec277..6ceb02a81a0b58133c4975270d84cde3df99e853 100644
+--- a/package.json
++++ b/package.json
+@@ -19,7 +19,7 @@
+     "bin/*",
+     "types/*"
+   ],
+-  "types": "./types/*.d.ts",
++  "types": "./types/action-yml.d.ts",
+   "scripts": {
+     "build:cli": "ncc build src/cli.ts -o bin"
+   },
