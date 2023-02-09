@@ -60,6 +60,8 @@ jobs:
 
       - name: Update tag
         uses: aboutte/build-and-tag-action@v2.1.0
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         with:
           tag_name: ${{ steps.tag.outputs.name }}
           additional_files: 'README.md'
