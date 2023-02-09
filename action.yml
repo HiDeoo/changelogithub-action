@@ -36,7 +36,7 @@ inputs:
     description: 'The end commit reference. When not provided, the latest commit in HEAD is used.'
     required: false
   token:
-    description: 'GitHub Token'
+    description: 'The GitHub Token to use.'
     required: true
 outputs:
   release_id:

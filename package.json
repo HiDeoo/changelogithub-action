@@ -1,9 +1,10 @@
 {
   "name": "changelogithub-action",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "",
   "author": "HiDeoo <github@hideoo.dev> (https://hideoo.dev)",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsx scripts/build.mts",
     "local": "act -j local --container-architecture linux/amd64",
