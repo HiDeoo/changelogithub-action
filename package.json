@@ -2,7 +2,7 @@
   "name": "changelogithub-action",
   "version": "1.0.1",
   "license": "MIT",
-  "description": "",
+  "description": "GitHub Action to generate Changelog for GitHub releases from Conventional Commits.",
   "author": "HiDeoo <github@hideoo.dev> (https://hideoo.dev)",
   "main": "dist/index.js",
   "scripts": {
@@ -43,7 +43,13 @@
   "packageManager": "pnpm@7.26.3",
   "private": true,
   "sideEffects": false,
-  "keywords": [],
+  "keywords": [
+    "github",
+    "release",
+    "conventional-commits",
+    "changelog",
+    "github-actions"
+  ],
   "homepage": "https://github.com/HiDeoo/changelogithub-action",
   "repository": {
     "type": "git",
