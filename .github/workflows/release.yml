@@ -67,6 +67,6 @@ jobs:
           additional_files: 'README.md'
 
       - name: Generate changelog
-        run: ./
+        uses: ./
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
