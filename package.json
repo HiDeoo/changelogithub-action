@@ -5,8 +5,8 @@
   "description": "",
   "author": "HiDeoo <github@hideoo.dev> (https://hideoo.dev)",
   "scripts": {
+    "build": "tsx scripts/build.mts",
     "local": "act -j local --container-architecture linux/amd64",
-    "build": "ncc build src/index.ts",
     "lint": "prettier -c --cache . && eslint . --cache --max-warnings=0 && tsc --noEmit",
     "test": "vitest",
     "prepare": "husky install"
@@ -19,12 +19,13 @@
     "@hideoo/eslint-config": "1.0.0",
     "@hideoo/prettier-config": "1.0.1",
     "@hideoo/tsconfig": "1.0.0",
-    "@vercel/ncc": "0.36.1",
     "@xt0rted/actions-toolkit": "0.0.1",
+    "esbuild": "0.17.6",
     "eslint": "8.33.0",
     "husky": "8.0.3",
     "lint-staged": "13.1.1",
     "prettier": "2.8.4",
+    "tsx": "3.12.3",
     "typescript": "4.9.5",
     "vitest": "0.28.4",
     "yaml": "2.2.1"
