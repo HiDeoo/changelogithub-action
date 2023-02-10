@@ -1,6 +1,6 @@
-name: 'Generate changelog for GitHub'
+name: 'Generate Changelog for GitHub'
 author: 'HiDeoo'
-description: 'Generate changelog for GitHub releases from Conventional Commits.'
+description: 'Generate Changelog for GitHub releases from Conventional Commits.'
 inputs:
   capitalize:
     description: 'Capitalize commit messages.'
